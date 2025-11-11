@@ -92,16 +92,6 @@ chatWindow.innerHTML = `
       chatBody.scrollTop = chatBody.scrollHeight; 
     }
 
-    // 6. Kirim pesan ke server
-    chatInput.onkeydown = (e) => {
-      if (e.key === 'Enter' && chatInput.value.trim() !== '') {
-        const msg = chatInput.value;
-        appendMessage(msg, 'klien'); // Tampilkan pesan kita
-        socket.emit('pesan_dari_klien', msg); // Kirim ke server
-        chatInput.value = '';
-      }
-    };
-
     // 7. Terima balasan dari server
     socket.on('pesan_dari_server', (balasan) => {
       appendMessage(balasan, 'server'); // Tampilkan pesan bot

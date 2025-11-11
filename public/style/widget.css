@@ -57,13 +57,13 @@
 }
 
 .chat-footer {
-  position: sticky;
+  /* --- HAPUS BARIS INI: --- */
   display: flex; 
   align-items: center; 
   padding: 8px 12px; 
   background-color: #f0f2f5; 
   border-top: 1px solid #ddd;
-  flex-shrink: 0;
+  flex-shrink: 0; /* (Ini sudah benar, biarkan) */
 }
 
 /* 2. Style untuk input field (bulat) */
