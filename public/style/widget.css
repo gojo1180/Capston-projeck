@@ -1,0 +1,125 @@
+/* simpan sebagai widget.css */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 9998;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  height: 450px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  font-family: sans-serif;
+
+  /* --- TAMBAHKAN INI --- */
+  overflow: hidden; 
+}
+
+.chat-header {
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.chat-body {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  
+  /* INI YANG BENAR (biarkan ini) */
+  min-height: 0; 
+
+  /* HAPUS ATAU JANGAN TAMBAHKAN 'height: 100%;' */
+}
+
+.chat-footer {
+  position: sticky;
+  display: flex; 
+  align-items: center; 
+  padding: 8px 12px; 
+  background-color: #f0f2f5; 
+  border-top: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+/* 2. Style untuk input field (bulat) */
+.chat-input {
+  flex-grow: 1; 
+  border: none; 
+  outline: none; 
+  padding: 12px 18px; 
+  font-size: 16px;
+  background-color: #ffffff; 
+  border-radius: 25px; 
+  margin-right: 8px; 
+}
+
+/* 3. Style untuk tombol kirim (bulat) */
+.send-button {
+  background-color: #007bff; /* Ganti dengan warna utama Anda */
+  border: none;
+  color: white;
+  border-radius: 50%; /* KUNCI: Membuat tombol bulat sempurna */
+  width: 44px;  /* Lebar dan tinggi harus sama */
+  height: 44px;
+  cursor: pointer;
+  
+  /* Bikin ikon SVG pas di tengah */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-input:focus {
+  outline: none;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 18px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.chat-message.klien {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+}
+
+.chat-message.server {
+  background-color: #e9e9eb;
+  color: black;
+  align-self: flex-start;
+}
+
+/* Indikator "mengetik" */
+.chat-message.typing {
+  font-style: italic;
+  color: #777;
+}
